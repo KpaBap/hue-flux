@@ -6,7 +6,7 @@ from datetime import datetime, timedelta
 
 def get_sun(location):
     apikey = "abc123"
-    if apikey = "abc123":
+    if apikey == "abc123":
       print ("Please set a valid wunderground API key in sun.py")
       return
 
