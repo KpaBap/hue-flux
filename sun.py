@@ -1,7 +1,6 @@
 import json
 import urllib.request
 import urllib.parse
-from datetime import datetime, timedelta
 
 
 def get_sun(location):
