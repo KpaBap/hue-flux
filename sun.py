@@ -21,26 +21,4 @@ def get_sun(location):
     sunrise = "{}:{}".format(data['sunrise']['hour'], data['sunrise']['minute'])
     sunset = "{}:{}".format(data['sunset']['hour'], data['sunset']['minute'])
 
-    now = datetime.strptime(time, "%H:%M")
-    sunriseobj = datetime.strptime(sunrise, "%H:%M")
-    sunsetobj = datetime.strptime(sunset, "%H:%M")
-
-    sunlength = sunsetobj - sunriseobj
-    if sunriseobj > now:
-       ago = "from now"
-       td = sunriseobj - now
-    else:
-       td = now - sunriseobj
-       ago = "ago"
-
-    if sunsetobj > now:
-       ago = "from now"
-       td = sunsetobj - now
-    else:
-       ago = "ago"
-       td = now - sunsetobj
-
-
-    
-    
     return sunrise, sunset
