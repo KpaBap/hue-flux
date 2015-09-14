@@ -2,7 +2,7 @@
 Recreation of f.lux for Phillips Hue lights in Python by KpaBap
 
 This script aims to closely replicate the functionality of f.lux for Phillips Hue
-It is meant to be ran from a cronjob once a day, or manually when you want the lights to turn on
+It is meant to be ran from a cronjob once a day, or manually when you want the lights to turn on and begin fading
 
 Requirements: 
 - Phillips Hue bridge on local network
