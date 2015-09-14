@@ -234,7 +234,7 @@ def get_secs_to_hour(hour):
 # Change settings as desired
 
 location = "95050"  # Zip code or some other location string
-bedtime = "21:30"
+bedtime = "21:00"
 day_colortemp = 4000
 sunset_colortemp = 3000
 bedtime_colortemp = 1900
@@ -261,12 +261,15 @@ turn_lights_on(lights)
 sunset_time = sun.get_sun(location)[1]  # Sunset time in 24hr format
 fadetime = get_secs_to_hour(sunset_time)
 
-print("Local sunset is at: %s, in %s seconds" % (sunset_time, fadetime))
-fade_colortemp_k(lights, day_colortemp, sunset_colortemp, fadetime)
+if fadetime > 0:
+    print("Local sunset is at: %s, in %s seconds" % (sunset_time, fadetime))
+    fade_colortemp_k(lights, day_colortemp, sunset_colortemp, fadetime)
 
 fadetime = get_secs_to_hour(bedtime)
-print("The sun has set. Bedtime is at: %s, in %s seconds" %
-      (bedtime, fadetime))
-fade_colortemp_k(lights, sunset_colortemp, bedtime_colortemp, fadetime)
+
+if fadetime > 0:
+    print("The sun has set. Bedtime is at: %s, in %s seconds" %
+          (bedtime, fadetime))
+    fade_colortemp_k(lights, sunset_colortemp, bedtime_colortemp, fadetime)
 
 print("Sweet dreams!")
