@@ -5,6 +5,7 @@ This script aims to closely replicate the functionality of f.lux for Phillips Hu
 It is meant to be ran from a cronjob once a day, or manually when you want the lights to turn on
 
 Requirements: 
+- Phillips Hue bridge on local network
 - Python 3
 - Phue library (https://github.com/studioimaginaire/phue) - run "pip3 install phue"
 
