@@ -33,8 +33,10 @@ def discover_and_connect_bridge():
 
         if hub_ip:
             print("Found hub at: %s" % hub_ip)
-
-    while not(registered):
+    
+    discover_start = time.time()
+    
+    while not(registered and (time.time() - discover_start > 90)):  # Time out in 90 seconds
         try:
             bridge = phue.Bridge(hub_ip)
             registered = True
@@ -47,6 +49,7 @@ def discover_and_connect_bridge():
                 print(
                     "Please press the button on the Hue bridge to connect this app.")
                 help_printed = True
+    print ("Hub discovery timed out.")
 
 
 def verify_hue_upnp(url):
