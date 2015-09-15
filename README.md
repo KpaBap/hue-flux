@@ -9,7 +9,7 @@ Requirements:
 - Python 3
 - Phue library (https://github.com/studioimaginaire/phue) - run "pip3 install phue"
 
-- Get a Wunderground API key and configure it in save it on a single line in a text file called wunder.api - this allows automatic lookup of your location's time of sunset
+- Get a Wunderground API key and save it on a single line in a text file called wunder.api - this allows automatic lookup of your location's time of sunset
 - You can also manually set "sunset_time" instead in 24hr format - e.g. "21:00"
 
 - Set the prefered color temperatures and bed times in hue-flux.py variables
